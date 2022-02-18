@@ -1,7 +1,7 @@
 # lampstack
-containerize the lamp stack 
-# Simple LAMP Application
-This is a simple LAMP application written to support the simulation of application deployments using Ansible. The application acts like a 'wall', where users can post comments that are stored in a database and displayed on the main page for everyone to see.
+ 
+# Simple LAMP Application setup Devtron
+This is a simple LAMP application written to support the simulation of application deployments using Devtron tool. The application acts like a 'wall', where users can post comments that are stored in a database(mysql) and displayed on the main page for everyone to see.
 
 ## Database Schema
 Entries are stored in a table called *records*. The schema for the *records* table is as follows:
@@ -17,10 +17,13 @@ USE `my_database_name`;
 CREATE TABLE IF NOT EXISTS `records` (`id` MEDIUMINT NOT NULL AUTO_INCREMENT, `message` VARCHAR(255), PRIMARY KEY (`id`));
 ```
 ## Application Variables
-The following variables should be stored outside the document root. By default, index.php will try and source `../credentials.php`.
+The following variables should be the pass during create the application by docker.
+
+## Note
+Before access the index.php page , first access `setup.php` file to fulfil basic requirement 
 ```php
-$database_hostname = "blah.asdf.us-east-1.rds.amazonaws.com";
-$database_username = "my_app_user";
-$database_password = "password";
-$database = "myapp";
+    HOSTNAME=abc.mysql.com
+    ROOT_USERNAME=xxxabcxxx
+    ROOT_PASSWORD=xxxxabcxxx
+    DB_NAME=mydb
 ```
