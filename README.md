@@ -1,6 +1,5 @@
-# lampstack
- 
-# Simple LAMP Application setup Devtron
+
+# Simple LAMP Application setup using Devtron
 This is a simple LAMP application written to support the simulation of application deployments using Devtron tool. The application acts like a 'wall', where users can post comments that are stored in a database(mysql) and displayed on the main page for everyone to see.
 
 ## Database Schema
